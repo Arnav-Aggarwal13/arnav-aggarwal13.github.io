@@ -4,295 +4,301 @@
   <meta charset="UTF-8">
   <title>Arnav Aggarwal</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <style>
-    /* Basic reset */
+    /* ---------- Layout + base styles ---------- */
     * {
       box-sizing: border-box;
-      margin: 0;
-      padding: 0;
     }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
       line-height: 1.6;
+      background: #fafafa;
       color: #222;
-      background-color: #f7f7f7;
-      padding: 2rem 1rem;
     }
 
-    .container {
+    .page {
       max-width: 900px;
       margin: 0 auto;
-      background: #fff;
-      padding: 2rem;
-      border-radius: 8px;
-      border: 1px solid #ddd;
+      padding: 2rem 1.5rem 3rem;
     }
 
-    header {
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 1rem;
+    a {
+      color: #0070c9;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* ---------- Top navigation ---------- */
+    .nav {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: flex-end;
+      font-size: 0.9rem;
       margin-bottom: 1.5rem;
     }
 
-    header h1 {
-      font-size: 2rem;
-      letter-spacing: 0.03em;
-      margin-bottom: 0.25rem;
-    }
-
-    header .subtitle {
-      font-size: 0.95rem;
-      color: #555;
-      margin-bottom: 0.5rem;
-    }
-
-    .contact {
-      font-size: 0.9rem;
-      color: #444;
-    }
-
-    .contact a {
-      color: inherit;
-      text-decoration: none;
-      border-bottom: 1px solid #ccc;
-    }
-
-    .contact a:hover {
-      border-bottom-color: #000;
-    }
-
-    section {
-      margin-bottom: 1.75rem;
-    }
-
-    section h2 {
-      font-size: 1.25rem;
-      margin-bottom: 0.75rem;
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 0.25rem;
-      text-transform: uppercase;
+    .nav a {
+      text-transform: lowercase;
       letter-spacing: 0.08em;
+    }
+
+    .nav a.active {
       font-weight: 600;
     }
 
-    .item {
-      margin-bottom: 1rem;
-    }
-
-    .item-header {
+    /* ---------- Hero / header ---------- */
+    .hero {
       display: flex;
-      justify-content: space-between;
       flex-wrap: wrap;
-      font-weight: 600;
+      gap: 1.5rem;
+      align-items: center;
+      margin-bottom: 2rem;
     }
 
-    .item-header .left {
-      margin-right: 1rem;
+    .hero-img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      background: #ddd;
+      object-fit: cover;
+      flex-shrink: 0;
     }
 
-    .item-subheader {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
+    .hero-main h1 {
+      margin: 0 0 0.25rem 0;
+      font-size: 1.75rem;
+    }
+
+    .hero-main h2 {
+      margin: 0 0 0.5rem 0;
+      font-size: 1rem;
+      font-weight: 500;
+      color: #555;
+    }
+
+    .hero-main .status-line {
       font-size: 0.9rem;
       color: #555;
-      margin-top: 0.15rem;
+      margin: 0.15rem 0;
     }
 
-    ul {
-      margin-left: 1.25rem;
-      margin-top: 0.4rem;
+    .hero-main .contact {
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+    }
+
+    .hero-main .contact span {
+      margin-right: 0.5rem;
+    }
+
+    /* ---------- Section headings ---------- */
+    section {
+      margin-top: 2rem;
+    }
+
+    .section-title {
+      font-size: 1.2rem;
+      margin-bottom: 0.75rem;
+      font-weight: 600;
+    }
+
+    /* Add a leading "#" like in markdown sites */
+    .section-title::before {
+      content: "# ";
+      color: #999;
+      font-weight: 400;
+    }
+
+    /* ---------- Text blocks ---------- */
+    .about-text {
+      max-width: 70ch;
+      font-size: 0.98rem;
+    }
+
+    .entry {
+      margin-bottom: 1.5rem;
+    }
+
+    .entry-title {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.1rem;
+    }
+
+    .entry-meta {
+      font-size: 0.85rem;
+      color: #666;
+      margin-bottom: 0.35rem;
+    }
+
+    .entry ul {
+      margin: 0.25rem 0 0 1.25rem;
+      padding: 0;
       font-size: 0.95rem;
     }
 
-    li + li {
+    .entry ul li + li {
       margin-top: 0.25rem;
     }
 
-    .tagline {
-      margin-top: 0.5rem;
-      font-size: 0.95rem;
-      color: #555;
+    /* ---------- News style (optional) ---------- */
+    .news-item {
+      margin-bottom: 0.6rem;
+      font-size: 0.9rem;
     }
 
-    @media (max-width: 600px) {
-      .item-header,
-      .item-subheader {
-        flex-direction: column;
-        align-items: flex-start;
+    .news-date {
+      font-weight: 600;
+      margin-right: 0.4rem;
+    }
+
+    /* ---------- Responsive tweaks ---------- */
+    @media (max-width: 650px) {
+      .nav {
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .hero {
+        justify-content: center;
+        text-align: center;
+      }
+      .hero-main .contact {
+        justify-content: center;
       }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <h1>Arnav Aggarwal</h1>
-      <p class="subtitle">
-        B.S. Computer Science (AI &amp; Decision Making), Minor in Brain &amp; Cognitive Sciences · MIT, Class of 2026
-      </p>
-      <p class="contact">
-        Boston, MA · 609-647-7504 ·
-        <a href="mailto:arnavxaggs@gmail.com">arnavxaggs@gmail.com</a> ·
-        <a href="https://www.linkedin.com/in/arnavaggs/" target="_blank" rel="noopener noreferrer">
-          linkedin.com/in/arnavaggs
-        </a>
-      </p>
-      <p class="tagline">
-        I build machine learning models to solve neuroscience and perception problems, and deploy end-to-end systems in the real world.
-      </p>
+  <div class="page">
+
+    <!-- Top navigation -->
+    <nav class="nav">
+      <a href="#about">about</a>
+      <a href="#research">research</a>
+      <a href="#teaching">teaching</a>
+      <a href="#projects">projects</a>
+    </nav>
+
+    <!-- Hero / header block -->
+    <header class="hero">
+      <!-- Replace profile.jpg with your own photo file if you want -->
+      <img src="profile.jpg" alt="Photo of Arnav Aggarwal" class="hero-img">
+
+      <div class="hero-main">
+        <h1>Arnav Aggarwal</h1>
+        <h2>Computer Science (AI &amp; Decision Making) · Brain &amp; Cognitive Sciences @ MIT</h2>
+
+        <p class="status-line"><strong>Currently:</strong> Doing research at the intersection of machine learning and neuroscience.</p>
+        <p class="status-line">
+          <strong>Previously:</strong> Machine Learning Intern @ LuxTronic · ErgOCR + LLMimic projects · TA for AI &amp; Rationality and Fundamentals of Programming.
+        </p>
+
+        <p class="contact">
+          <span><a href="mailto:arnavxaggs@gmail.com">arnavxaggs@gmail.com</a></span> ·
+          <span>Boston, MA</span> ·
+          <span><a href="https://www.linkedin.com/in/arnavaggs/" target="_blank" rel="noopener noreferrer">LinkedIn</a></span>
+          <!-- TODO: add your GitHub link below if you want -->
+          <!-- · <span><a href="https://github.com/YOUR_USERNAME" target="_blank" rel="noopener noreferrer">GitHub</a></span> -->
+        </p>
+      </div>
     </header>
 
-    <!-- Education -->
-    <section id="education">
-      <h2>Education</h2>
-
-      <div class="item">
-        <div class="item-header">
-          <div class="left">Massachusetts Institute of Technology</div>
-          <div class="right">Cambridge, MA</div>
-        </div>
-        <div class="item-subheader">
-          <div>Bachelor of Science, Computer Science: AI &amp; Decision Making · Minor in Brain &amp; Cognitive Sciences</div>
-          <div>Class of 2026 · GPA: 4.91 / 5.0</div>
-        </div>
-        <ul>
-          <li>Relevant coursework: Machine Learning, Neuroscience, Natural Language Processing, Computer Vision, Signal Processing, Programming in Python, Linear Algebra &amp; Optimization, Algorithms, Probability.</li>
-        </ul>
-      </div>
-
-      <div class="item">
-        <div class="item-header">
-          <div class="left">The Lawrenceville School</div>
-          <div class="right">Lawrenceville, NJ</div>
-        </div>
-        <div class="item-subheader">
-          <div>GPA: 3.9 / 4.0</div>
-        </div>
-        <ul>
-          <li>Activities: House Prefect, Crew, Hindu Student Organization President, Community Service Representative.</li>
-        </ul>
-      </div>
+    <!-- About -->
+    <section id="about">
+      <h2 class="section-title">about me</h2>
+      <p class="about-text">
+        I’m an undergraduate at MIT studying Computer Science (AI &amp; Decision Making) with a minor in Brain and Cognitive Sciences.
+        I like building machine learning models that tell us something about how the brain works, and then turning those ideas into
+        practical systems. Recently, this has meant reconstructing EEG from fMRI in sleep, designing human-aligned speech models,
+        and building tools like ErgOCR to solve real-world problems for my rowing team.
+      </p>
     </section>
 
-    <!-- Research Experience -->
+    <!-- Research -->
     <section id="research">
-      <h2>Research Experience</h2>
+      <h2 class="section-title">research</h2>
 
-      <div class="item">
-        <div class="item-header">
-          <div class="left">Researcher, Dr. Laura Lewis’ Lab</div>
-          <div class="right">Cambridge, MA</div>
-        </div>
-        <div class="item-subheader">
-          <div>Massachusetts Institute of Technology</div>
-          <div>Jun 2025 – May 2026</div>
-        </div>
+      <div class="entry">
+        <div class="entry-title">Reconstructing EEG from fMRI</div>
+        <div class="entry-meta">Lewis Lab · MIT · 2025–present</div>
         <ul>
-          <li>Built a machine learning model to reconstruct EEG rhythms from simultaneously recorded fMRI data, achieving Pearson correlations of 0.44 (alpha) and 0.41 (delta), improving over prior separate-model results of 0.41 and 0.30.</li>
-          <li>Extending this approach to reconstruct full EEG spectrograms to uncover how spatially-specific fMRI activity relates to fast EEG dynamics.</li>
+          <li>Developing neural network models that reconstruct EEG rhythms and spectrograms from simultaneously recorded fMRI, linking high-spatial and high-temporal resolution signals.</li>
+          <li>Showed that pretraining across subjects followed by per-subject finetuning improves predictions most for EEG features known to vary strongly between individuals.</li>
         </ul>
       </div>
 
-      <div class="item">
-        <div class="item-header">
-          <div class="left">Researcher, Lab for Computational Audition</div>
-          <div class="right">Cambridge, MA</div>
-        </div>
-        <div class="item-subheader">
-          <div>MIT (Dr. Joshua McDermott’s Lab)</div>
-          <div>Feb 2025 – Aug 2025</div>
-        </div>
+      <div class="entry">
+        <div class="entry-title">Human-aligned speech perception models</div>
+        <div class="entry-meta">Lab for Computational Audition (McDermott Lab) · MIT · 2025</div>
         <ul>
-          <li>Designed and conducted experiments comparing categorical perception in humans with a biologically-plausible speech recognition model; abstract submitted to the Association for Research in Otolaryngology.</li>
-          <li>Built machine learning models, generated computational speech stimuli, and ran human experiments.</li>
+          <li>Designed experiments comparing categorical perception in humans with a biologically-inspired speech recognition model.</li>
+          <li>Generated computational speech stimuli, ran human psychophysics-style experiments, and analyzed alignment between model behavior and human data.</li>
         </ul>
       </div>
     </section>
 
-    <!-- Projects / Work Experience -->
-    <section id="projects">
-      <h2>Projects &amp; Industry Experience</h2>
-
-      <div class="item">
-        <div class="item-header">
-          <div class="left">ErgOCR · Personal Project</div>
-          <div class="right">Cambridge, MA</div>
-        </div>
-        <div class="item-subheader">
-          <div>Feb 2025 – May 2025</div>
-        </div>
-        <ul>
-          <li>Developed an application to automatically detect and transcribe rowing machine workout scores from screen images, integrating object detection, perspective correction, and text recognition.</li>
-          <li>Achieved 96% transcription accuracy on a test set, reducing a three-person score-entry process by 10×.</li>
-          <li>Deployed into MIT Crew’s score recording workflow, streamlining data collection for coaches and athletes.</li>
-        </ul>
-      </div>
-
-      <div class="item">
-        <div class="item-header">
-          <div class="left">LLMimic · Personal Project</div>
-          <div class="right">Cambridge, MA</div>
-        </div>
-        <div class="item-subheader">
-          <div>Sept 2024 – Dec 2024</div>
-        </div>
-        <ul>
-          <li>Developed a tool for personalized author style emulation, combining fine-tuning and RAG techniques.</li>
-          <li>Achieved a 25% improvement in style accuracy using authorship attribution models and an 85% increase in stylistic alignment over baseline using BLEU metrics.</li>
-          <li>Engineered a scalable evaluation framework integrating BLEU and AA-based metrics to validate model performance across diverse writing scenarios.</li>
-        </ul>
-      </div>
-
-      <div class="item">
-        <div class="item-header">
-          <div class="left">Machine Learning Intern, LuxTronic</div>
-          <div class="right">Remote</div>
-        </div>
-        <div class="item-subheader">
-          <div>May 2024 – Aug 2024</div>
-        </div>
-        <ul>
-          <li>Upgraded object detection models to YOLOv10, yielding an average 5% accuracy improvement on the most challenging customer datasets while maintaining backward compatibility.</li>
-          <li>Developed a CycleGAN to generate synthetic images of clear bottles from dark ones to address data scarcity.</li>
-          <li>Simplified client access to factory data using GPT-4o with RAG, enabling natural-language queries and insight generation.</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Teaching Experience -->
+    <!-- Teaching -->
     <section id="teaching">
-      <h2>Teaching Experience</h2>
+      <h2 class="section-title">teaching</h2>
 
-      <div class="item">
-        <div class="item-header">
-          <div class="left">Teaching Assistant, Artificial Intelligence and Rationality</div>
-          <div class="right">Cambridge, MA</div>
-        </div>
-        <div class="item-subheader">
-          <div>Sept 2025 – Dec 2025</div>
-        </div>
+      <div class="entry">
+        <div class="entry-title">Teaching Assistant · AI and Rationality</div>
+        <div class="entry-meta">MIT · 2025</div>
         <ul>
-          <li>Guided students during office hours on both the technical (mathematical problem sets) and philosophical (writing) components of the course.</li>
-          <li>Tested and provided feedback on homework assignments and exam problems to course instructors.</li>
+          <li>Led office hours for a joint computer science and philosophy course, helping students with both technical problem sets and writing-based assignments.</li>
+          <li>Trialed and reviewed homework and quiz problems, giving feedback to instructors on clarity and difficulty.</li>
         </ul>
       </div>
 
-      <div class="item">
-        <div class="item-header">
-          <div class="left">Teaching Assistant, Fundamentals of Programming</div>
-          <div class="right">Cambridge, MA</div>
-        </div>
-        <div class="item-subheader">
-          <div>Sept 2024 – Dec 2024</div>
-        </div>
+      <div class="entry">
+        <div class="entry-title">Teaching Assistant · Fundamentals of Programming</div>
+        <div class="entry-meta">MIT · 2024</div>
         <ul>
-          <li>Helped debug students’ code and guided them through complex programming problems during office hours.</li>
-          <li>Assessed students’ understanding verbally and checked code for cleanliness, complexity, and readability.</li>
+          <li>Guided students through debugging and designing solutions to medium-sized programming assignments in Python.</li>
+          <li>Checked code for correctness, readability, and problem-solving strategy during office hours and checkoffs.</li>
         </ul>
       </div>
     </section>
+
+    <!-- Projects / other work -->
+    <section id="projects">
+      <h2 class="section-title">projects</h2>
+
+      <div class="entry">
+        <div class="entry-title">ErgOCR – rowing workout transcription</div>
+        <div class="entry-meta">Personal project · 2025</div>
+        <ul>
+          <li>Built an end-to-end system to detect and transcribe rowing machine scores from photos of the monitor, using object detection, perspective correction, and OCR.</li>
+          <li>Achieved ~96% transcription accuracy and integrated the tool into MIT rowing’s score recording workflow, reducing manual data entry time by an order of magnitude.</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-title">LLMimic – personal writing style emulation</div>
+        <div class="entry-meta">Personal project · 2024</div>
+        <ul>
+          <li>Combined fine-tuning and retrieval-augmented generation to better match a target author’s writing style.</li>
+          <li>Designed an evaluation framework using authorship attribution and BLEU-style metrics to quantify stylistic alignment.</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-title">Machine Learning Intern · LuxTronic</div>
+        <div class="entry-meta">Remote · Summer 2024</div>
+        <ul>
+          <li>Integrated YOLOv10 into existing detection pipelines and achieved roughly 5% accuracy gains on challenging customer datasets.</li>
+          <li>Developed a CycleGAN to generate synthetic clear-bottle images from dark-bottle images to address data scarcity.</li>
+          <li>Prototyped a GPT-based natural language interface (with RAG) for querying factory data without touching the raw dashboards.</li>
+        </ul>
+      </div>
+    </section>
+
   </div>
 </body>
 </html>
