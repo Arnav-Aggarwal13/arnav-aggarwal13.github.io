@@ -1,1 +1,298 @@
-<h1>My Portfolio</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Arnav Aggarwal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    /* Basic reset */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+      color: #222;
+      background-color: #f7f7f7;
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+    }
+
+    header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      letter-spacing: 0.03em;
+      margin-bottom: 0.25rem;
+    }
+
+    header .subtitle {
+      font-size: 0.95rem;
+      color: #555;
+      margin-bottom: 0.5rem;
+    }
+
+    .contact {
+      font-size: 0.9rem;
+      color: #444;
+    }
+
+    .contact a {
+      color: inherit;
+      text-decoration: none;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .contact a:hover {
+      border-bottom-color: #000;
+    }
+
+    section {
+      margin-bottom: 1.75rem;
+    }
+
+    section h2 {
+      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.25rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 600;
+    }
+
+    .item {
+      margin-bottom: 1rem;
+    }
+
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      font-weight: 600;
+    }
+
+    .item-header .left {
+      margin-right: 1rem;
+    }
+
+    .item-subheader {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      font-size: 0.9rem;
+      color: #555;
+      margin-top: 0.15rem;
+    }
+
+    ul {
+      margin-left: 1.25rem;
+      margin-top: 0.4rem;
+      font-size: 0.95rem;
+    }
+
+    li + li {
+      margin-top: 0.25rem;
+    }
+
+    .tagline {
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    @media (max-width: 600px) {
+      .item-header,
+      .item-subheader {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Arnav Aggarwal</h1>
+      <p class="subtitle">
+        B.S. Computer Science (AI &amp; Decision Making), Minor in Brain &amp; Cognitive Sciences · MIT, Class of 2026
+      </p>
+      <p class="contact">
+        Boston, MA · 609-647-7504 ·
+        <a href="mailto:arnavxaggs@gmail.com">arnavxaggs@gmail.com</a> ·
+        <a href="https://www.linkedin.com/in/arnavaggs/" target="_blank" rel="noopener noreferrer">
+          linkedin.com/in/arnavaggs
+        </a>
+      </p>
+      <p class="tagline">
+        I build machine learning models to solve neuroscience and perception problems, and deploy end-to-end systems in the real world.
+      </p>
+    </header>
+
+    <!-- Education -->
+    <section id="education">
+      <h2>Education</h2>
+
+      <div class="item">
+        <div class="item-header">
+          <div class="left">Massachusetts Institute of Technology</div>
+          <div class="right">Cambridge, MA</div>
+        </div>
+        <div class="item-subheader">
+          <div>Bachelor of Science, Computer Science: AI &amp; Decision Making · Minor in Brain &amp; Cognitive Sciences</div>
+          <div>Class of 2026 · GPA: 4.91 / 5.0</div>
+        </div>
+        <ul>
+          <li>Relevant coursework: Machine Learning, Neuroscience, Natural Language Processing, Computer Vision, Signal Processing, Programming in Python, Linear Algebra &amp; Optimization, Algorithms, Probability.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <div class="left">The Lawrenceville School</div>
+          <div class="right">Lawrenceville, NJ</div>
+        </div>
+        <div class="item-subheader">
+          <div>GPA: 3.9 / 4.0</div>
+        </div>
+        <ul>
+          <li>Activities: House Prefect, Crew, Hindu Student Organization President, Community Service Representative.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Research Experience -->
+    <section id="research">
+      <h2>Research Experience</h2>
+
+      <div class="item">
+        <div class="item-header">
+          <div class="left">Researcher, Dr. Laura Lewis’ Lab</div>
+          <div class="right">Cambridge, MA</div>
+        </div>
+        <div class="item-subheader">
+          <div>Massachusetts Institute of Technology</div>
+          <div>Jun 2025 – May 2026</div>
+        </div>
+        <ul>
+          <li>Built a machine learning model to reconstruct EEG rhythms from simultaneously recorded fMRI data, achieving Pearson correlations of 0.44 (alpha) and 0.41 (delta), improving over prior separate-model results of 0.41 and 0.30.</li>
+          <li>Extending this approach to reconstruct full EEG spectrograms to uncover how spatially-specific fMRI activity relates to fast EEG dynamics.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <div class="left">Researcher, Lab for Computational Audition</div>
+          <div class="right">Cambridge, MA</div>
+        </div>
+        <div class="item-subheader">
+          <div>MIT (Dr. Joshua McDermott’s Lab)</div>
+          <div>Feb 2025 – Aug 2025</div>
+        </div>
+        <ul>
+          <li>Designed and conducted experiments comparing categorical perception in humans with a biologically-plausible speech recognition model; abstract submitted to the Association for Research in Otolaryngology.</li>
+          <li>Built machine learning models, generated computational speech stimuli, and ran human experiments.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Projects / Work Experience -->
+    <section id="projects">
+      <h2>Projects &amp; Industry Experience</h2>
+
+      <div class="item">
+        <div class="item-header">
+          <div class="left">ErgOCR · Personal Project</div>
+          <div class="right">Cambridge, MA</div>
+        </div>
+        <div class="item-subheader">
+          <div>Feb 2025 – May 2025</div>
+        </div>
+        <ul>
+          <li>Developed an application to automatically detect and transcribe rowing machine workout scores from screen images, integrating object detection, perspective correction, and text recognition.</li>
+          <li>Achieved 96% transcription accuracy on a test set, reducing a three-person score-entry process by 10×.</li>
+          <li>Deployed into MIT Crew’s score recording workflow, streamlining data collection for coaches and athletes.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <div class="left">LLMimic · Personal Project</div>
+          <div class="right">Cambridge, MA</div>
+        </div>
+        <div class="item-subheader">
+          <div>Sept 2024 – Dec 2024</div>
+        </div>
+        <ul>
+          <li>Developed a tool for personalized author style emulation, combining fine-tuning and RAG techniques.</li>
+          <li>Achieved a 25% improvement in style accuracy using authorship attribution models and an 85% increase in stylistic alignment over baseline using BLEU metrics.</li>
+          <li>Engineered a scalable evaluation framework integrating BLEU and AA-based metrics to validate model performance across diverse writing scenarios.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <div class="left">Machine Learning Intern, LuxTronic</div>
+          <div class="right">Remote</div>
+        </div>
+        <div class="item-subheader">
+          <div>May 2024 – Aug 2024</div>
+        </div>
+        <ul>
+          <li>Upgraded object detection models to YOLOv10, yielding an average 5% accuracy improvement on the most challenging customer datasets while maintaining backward compatibility.</li>
+          <li>Developed a CycleGAN to generate synthetic images of clear bottles from dark ones to address data scarcity.</li>
+          <li>Simplified client access to factory data using GPT-4o with RAG, enabling natural-language queries and insight generation.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Teaching Experience -->
+    <section id="teaching">
+      <h2>Teaching Experience</h2>
+
+      <div class="item">
+        <div class="item-header">
+          <div class="left">Teaching Assistant, Artificial Intelligence and Rationality</div>
+          <div class="right">Cambridge, MA</div>
+        </div>
+        <div class="item-subheader">
+          <div>Sept 2025 – Dec 2025</div>
+        </div>
+        <ul>
+          <li>Guided students during office hours on both the technical (mathematical problem sets) and philosophical (writing) components of the course.</li>
+          <li>Tested and provided feedback on homework assignments and exam problems to course instructors.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <div class="left">Teaching Assistant, Fundamentals of Programming</div>
+          <div class="right">Cambridge, MA</div>
+        </div>
+        <div class="item-subheader">
+          <div>Sept 2024 – Dec 2024</div>
+        </div>
+        <ul>
+          <li>Helped debug students’ code and guided them through complex programming problems during office hours.</li>
+          <li>Assessed students’ understanding verbally and checked code for cleanliness, complexity, and readability.</li>
+        </ul>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
