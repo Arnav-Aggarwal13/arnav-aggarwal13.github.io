@@ -213,10 +213,15 @@
     <section id="about">
       <h2 class="section-title">about me</h2>
       <p class="about-text">
-        I’m an undergraduate at MIT studying Computer Science (AI &amp; Decision Making) with a minor in Brain and Cognitive Sciences.
-        I like building machine learning models that tell us something about how the brain works, and then turning those ideas into
-        practical systems. Recently, this has meant reconstructing EEG from fMRI in sleep, designing human-aligned speech models,
-        and building tools like ErgOCR to solve real-world problems for my rowing team.
+        I’m an undergraduate at MIT studying Computer Science (AI &amp; Decision Making) with a minor in Brain and Cognitive Sciences. 
+        I work at the intersection of machine learning and neuroscience, where I aim to develop specialized machine learning approaches 
+        to help answer core neuroscience questions—particularly those related to how we process visual information.
+
+        At the same time, I’m interested in using what we learn about human brain function and cognitive processes to build more 
+        biologically realistic artificial systems. In particular, I’m drawn to models that can learn efficiently from limited data, 
+        much like humans do, and that more faithfully capture the mechanisms underlying human perception.
+        
+
       </p>
     </section>
 
@@ -227,19 +232,28 @@
       <div class="entry">
         <div class="entry-title">Reconstructing EEG from fMRI</div>
         <div class="entry-meta">Lewis Lab · MIT · 2025–present</div>
-        <ul>
-          <li>Developing neural network models that reconstruct EEG rhythms and spectrograms from simultaneously recorded fMRI, linking high-spatial and high-temporal resolution signals.</li>
-          <li>Showed that pretraining across subjects followed by per-subject finetuning improves predictions most for EEG features known to vary strongly between individuals.</li>
-        </ul>
+        <p>
+          In this project, I have been developing neural network models to understand human brain activity. 
+          Traditionally, electroencephalograms (EEGs) are best suited for capturing activity with high temporal resolution, 
+          whereas functional magnetic resonance imaging (fMRI) is more effective at capturing activity with high spatial resolution. 
+          However, these signals are generally noisy, and their relationship is complex. To overcome this, I utilized neural 
+          networks to predict an EEG spectrogram from fMRI data, thereby modeling this relationship. I sucessfully used this model to 
+          associate patterns of EEG activity with the specific brain regions responsible for them.
+        </p>
       </div>
 
       <div class="entry">
         <div class="entry-title">Human-aligned speech perception models</div>
         <div class="entry-meta">Lab for Computational Audition (McDermott Lab) · MIT · 2025</div>
-        <ul>
-          <li>Designed experiments comparing categorical perception in humans with a biologically-inspired speech recognition model.</li>
-          <li>Generated computational speech stimuli, ran human psychophysics-style experiments, and analyzed alignment between model behavior and human data.</li>
-        </ul>
+        <p>
+          Humans exhibit a remarkable ability to understand speech across various speakers and noisy environments. While there has been 
+          significant progress in building accurate speech recognition models, these models rely on architectures that do not reflect brain processes, 
+          leading to behavior that diverges from human behavior. In this lab, I built a non-reccurent speech recognition model and compared its alignment with 
+          human speech perception against reccurrent models. I found that non-recurrent models fail to reproduce patterns of human behavior compared to recurrent ones, 
+          suggesting the importance of recurrence in human speech perception. I also examined the extent to which these models could 
+          reproduce categorical perception. I discovered that the human-aligned speech recognition model showed the same unique 
+          categorical perception pattern seen in humans. This work was published at the Association for Research in Otolaryngology (ARO). 
+        </p>
       </div>
     </section>
 
