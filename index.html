@@ -143,12 +143,15 @@
     .section-media {
       flex: 1 1 220px;
       max-width: 280px;          /* cap the width so it doesn’t overpower text */
+      display: flex;
+      justify-content: center;
     }
 
     .section-media img {
       width: 100%;
       height: auto;
-      display: block;
+      max-height: 200px;
+      object-fit: cover;
       border-radius: 0.75rem;    /* optional, just looks nice */
     }
 
