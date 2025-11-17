@@ -21,7 +21,7 @@
     }
 
     .page {
-      max-width: 900px;
+      max-width: 1000px;
       margin: 0 auto;
       padding: 2rem 1.5rem 3rem;
     }
@@ -53,12 +53,22 @@
     }
 
     /* ---------- Hero / header ---------- */
+    .complete_header {
+      display: flex;
+      align-items: center;         /* vertically align hero + about text */
+      justify-content: space-between;
+      gap: 2rem;                   /* space between columns */
+      margin-bottom: 3rem;
+    }
+
+
     .hero {
       display: flex;
       flex-wrap: wrap;
       gap: 1.5rem;
       align-items: center;
       margin-bottom: 2rem;
+      flex: 1 1 45%;
     }
 
     .hero-img {
@@ -97,6 +107,10 @@
       margin-right: 0.5rem;
     }
 
+    #about {
+      flex: 1 1 45%;
+    }
+
     /* ---------- Section headings ---------- */
     section {
       margin-top: 2rem;
@@ -117,7 +131,7 @@
 
     /* ---------- Text blocks ---------- */
     .about-text {
-      max-width: 70ch;
+      max-width: 60ch;
       font-size: 0.98rem;
     }
 
@@ -186,44 +200,46 @@
     </nav>
 
     <!-- Hero / header block -->
-    <header class="hero">
-      <!-- Replace profile.jpg with your own photo file if you want -->
-      <img src="profile.jpg" alt="Photo of Arnav Aggarwal" class="hero-img">
+     <div class="complete_header">
+      <header class="hero">
+        <!-- Replace profile.jpg with your own photo file if you want -->
+        <img src="profile.jpg" alt="Photo of Arnav Aggarwal" class="hero-img">
 
-      <div class="hero-main">
-        <h1>Arnav Aggarwal</h1>
-        <h2>Computer Science (AI &amp; Decision Making) · Brain &amp; Cognitive Sciences @ MIT</h2>
+        <div class="hero-main">
+          <h1>Arnav Aggarwal</h1>
+          <h2>Computer Science (AI &amp; Decision Making) · Brain &amp; Cognitive Sciences @ MIT</h2>
 
-        <p class="status-line"><strong>Currently:</strong> Doing research at the intersection of machine learning and neuroscience.</p>
-        <p class="status-line">
-          <strong>Previously:</strong> Machine Learning Intern @ LuxTronic · ErgOCR + LLMimic projects · TA for AI &amp; Rationality and Fundamentals of Programming.
+          <p class="status-line"><strong>Currently:</strong> Doing research at the intersection of machine learning and neuroscience.</p>
+          <p class="status-line">
+            <strong>Previously:</strong> Machine Learning Intern @ LuxTronic · ErgOCR + LLMimic projects · TA for AI &amp; Rationality and Fundamentals of Programming.
+          </p>
+
+          <p class="contact">
+            <span><a href="mailto:arnavxaggs@gmail.com">arnavxaggs@gmail.com</a></span> ·
+            <span>Boston, MA</span> ·
+            <span><a href="https://www.linkedin.com/in/arnavaggs/" target="_blank" rel="noopener noreferrer">LinkedIn</a></span>
+            <!-- TODO: add your GitHub link below if you want -->
+            <!-- · <span><a href="https://github.com/YOUR_USERNAME" target="_blank" rel="noopener noreferrer">GitHub</a></span> -->
+          </p>
+        </div>
+      </header>
+
+      <!-- About -->
+      <section id="about">
+        <h2 class="section-title">about me</h2>
+        <p class="about-text">
+          I’m an undergraduate at MIT studying Computer Science (AI &amp; Decision Making) with a minor in Brain and Cognitive Sciences. 
+          I work at the intersection of machine learning and neuroscience, where I aim to develop specialized machine learning approaches 
+          to help answer core neuroscience questions—particularly those related to how we process visual information.
+
+          At the same time, I’m interested in using what we learn about human brain function and cognitive processes to build more 
+          biologically realistic artificial systems. In particular, I’m drawn to models that can learn efficiently from limited data, 
+          much like humans do, and that more faithfully capture the mechanisms underlying human perception.
+          
+
         </p>
-
-        <p class="contact">
-          <span><a href="mailto:arnavxaggs@gmail.com">arnavxaggs@gmail.com</a></span> ·
-          <span>Boston, MA</span> ·
-          <span><a href="https://www.linkedin.com/in/arnavaggs/" target="_blank" rel="noopener noreferrer">LinkedIn</a></span>
-          <!-- TODO: add your GitHub link below if you want -->
-          <!-- · <span><a href="https://github.com/YOUR_USERNAME" target="_blank" rel="noopener noreferrer">GitHub</a></span> -->
-        </p>
-      </div>
-    </header>
-
-    <!-- About -->
-    <section id="about">
-      <h2 class="section-title">about me</h2>
-      <p class="about-text">
-        I’m an undergraduate at MIT studying Computer Science (AI &amp; Decision Making) with a minor in Brain and Cognitive Sciences. 
-        I work at the intersection of machine learning and neuroscience, where I aim to develop specialized machine learning approaches 
-        to help answer core neuroscience questions—particularly those related to how we process visual information.
-
-        At the same time, I’m interested in using what we learn about human brain function and cognitive processes to build more 
-        biologically realistic artificial systems. In particular, I’m drawn to models that can learn efficiently from limited data, 
-        much like humans do, and that more faithfully capture the mechanisms underlying human perception.
-        
-
-      </p>
-    </section>
+      </section>
+    </div>
 
     <!-- Research -->
     <section id="research">
