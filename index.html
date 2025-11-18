@@ -141,14 +141,14 @@
 
     }
     .section-text {
-      flex: 2 1 50%;
+      flex: 2 1 55%;
     }
     /* Image column on the right */
     .section-image {
       /* max-width: 280px;          cap the width so it doesn’t overpower text */
       display: flex;
       justify-content: center;
-      flex: 1 1 40%;
+      flex: 1 1 35%;
     }
 
     .section-image img {
@@ -286,7 +286,7 @@
               Traditionally, electroencephalograms (EEGs) are best suited for capturing activity with high temporal resolution, 
               whereas functional magnetic resonance imaging (fMRI) is more effective at capturing activity with high spatial resolution. 
               However, these signals are generally noisy, and their relationship is complex. To overcome this, I utilized neural 
-              networks to predict an EEG spectrogram from fMRI data, thereby modeling this relationship. I sucessfully used this model to 
+              networks to predict an EEG spectrogram from fMRI data, thereby modeling this relationship. I successfully used this model to 
               associate patterns of EEG activity with the specific brain regions responsible for them.
             </p>
           </div>
@@ -306,8 +306,8 @@
             <p>
               Humans exhibit a remarkable ability to understand speech across various speakers and noisy environments. While there has been 
               significant progress in building accurate speech recognition models, these models rely on architectures that do not reflect brain processes, 
-              leading to behavior that diverges from human behavior. In this lab, I built a non-reccurent speech recognition model and compared its alignment with 
-              human speech perception against reccurrent models. I found that non-recurrent models fail to reproduce patterns of human behavior compared to recurrent ones, 
+              leading to behavior that diverges from human behavior. In this lab, I built a non-recurrent speech recognition model and compared its alignment with 
+              human speech perception against recurrent models. I found that non-recurrent models fail to reproduce patterns of human behavior compared to recurrent ones, 
               suggesting the importance of recurrence in human speech perception. I also examined the extent to which these models could 
               reproduce categorical perception. I discovered that the human-aligned speech recognition model showed the same unique 
               categorical perception pattern seen in humans. This work was published at the Association for Research in Otolaryngology (ARO). 
@@ -323,18 +323,26 @@
     <!-- Projects / other work -->
     <section id="projects">
       <h2 class="section-title">projects</h2>
-
-      <div class="entry">
-        <div class="entry-title">ErgOCR – rowing machine workout transcription</div>
-        <div class="entry-meta">Personal project · 2025</div>
-        <p>
-          In collegiate rowing, coxswains face a cumbersome and error-prone task of manually recording rowing machine (ergometer) scores, 
-          often leading to inaccuracies potentially affecting athlete evaluation and boat placement. This project presents a computer vision 
-          application designed to automate the extraction, aggregation, and recording of ergometer scores from images, thus improving efficiency 
-          and accuracy compared with current manual efforts from coxswains. I achieved an accuracy of 99.5% of the scores in my test set. My developed 
-          pipeline provides motivation for a broader range of OCR tasks on data stored in wireless tables. 
-        </p>
+      <div class="section-layout">
+        <div class="section-text">
+          <div class="entry">
+            <div class="entry-title">ErgOCR – rowing machine workout transcription</div>
+            <div class="entry-meta">Personal project · 2025</div>
+            <p>
+              In collegiate rowing, coxswains face a cumbersome and error-prone task of manually recording rowing machine (ergometer) scores, 
+              often leading to inaccuracies potentially affecting athlete evaluation and boat placement. This project presents a computer vision 
+              application designed to automate the extraction, aggregation, and recording of ergometer scores from images, thus improving efficiency 
+              and accuracy compared with current manual efforts from coxswains. I achieved an accuracy of 99.5% of the scores in my test set. My developed 
+              pipeline provides motivation for a broader range of OCR tasks on data stored in wireless tables. 
+            </p>
+          </div>
+        </div>
+        <div class="section-image">
+            <img src="images/erg-figure.jpg" alt="ErgOCR figure">
+        </div>
       </div>
+
+
 
       <div class="entry">
         <div class="entry-title">LLMimic – personal writing style emulation</div>
