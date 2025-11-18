@@ -82,8 +82,6 @@
       flex-shrink: 0;
     }
 
-    
-
     .hero-main h1 {
       margin: 0 0 0.25rem 0;
       font-size: 1.75rem;
@@ -136,15 +134,21 @@
 
     .section-layout {
       display: flex;
-      gap: 1.75rem;
-      align-items: flex-start;
+      align-items: center;         /* vertically align hero + about text */
+      justify-content: space-between;
+      gap: 2rem;                   /* space between columns */
+      margin-bottom: 1rem;
+
+    }
+    .section-text {
+      flex: 2 1 60%;
     }
     /* Image column on the right */
     .section-image {
-      flex: 1 1 220px;
       max-width: 280px;          /* cap the width so it doesn’t overpower text */
       display: flex;
       justify-content: center;
+      flex: 1 1 30%;
     }
 
     .section-image img {
@@ -271,9 +275,9 @@
 
     <!-- Research -->
     <section id="research" class="content-section">
+      <h2 class="section-title">research</h2>
       <div class="section-layout">
         <div class="section-text">
-        <h2 class="section-title">research</h2>
           <div class="entry">
             <div class="entry-title">Reconstructing EEG from fMRI</div>
             <div class="entry-meta">Lewis Lab · MIT · 2025–present</div>
@@ -286,6 +290,16 @@
               associate patterns of EEG activity with the specific brain regions responsible for them.
             </p>
           </div>
+        </div>
+        <div class="section-image"> 
+          <!-- Optional image can go here -->
+           <img src="images/eeg-fmri-figure.png" alt="EEG–fMRI reconstruction figure">
+        </div>
+
+      </div>
+
+      <div class="section-layout">
+        <div class="section-text"> 
           <div class="entry">
             <div class="entry-title">Human-aligned speech perception models</div>
             <div class="entry-meta">Lab for Computational Audition (McDermott Lab) · MIT · 2025</div>
@@ -301,12 +315,9 @@
           </div>
         </div>
         <div class="section-image">
-          <!-- Optional image can go here -->
-           <img src="images/eeg-fmri-figure.png" alt="EEG–fMRI reconstruction figure">
-           <img src="images/speech-perception-figure.png" alt="Speech perception figure">
+            <img src="images/speech-models-figure.png" alt="Speech models figure">
+        </div>
       </div>
-
-
     </section>
 
     <!-- Projects / other work -->
