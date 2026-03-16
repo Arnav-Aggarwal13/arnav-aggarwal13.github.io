@@ -302,17 +302,20 @@
       <div class="section-layout">
         <div class="section-text">
           <div class="entry">
-            <div class="entry-title">Constructing EEG Spectrograms from fMRI Data using an Artificial Neural Network</div>
+            <div class="entry-title">Predicting EEG Spectrograms from fMRI to Identify Brainwide Activity Underlying Neural Rhythms</div>
             <div class="entry-meta">Lewis Lab · MIT · 2025–present</div>
             <a class="deliverable-box" href="deliverables/LewisLabPoster.pdf" target="_blank">Poster</a>
             <p class="section-p">
-              Traditionally, electroencephalograms (EEGs) are best suited for capturing activity with high temporal resolution, 
-              whereas functional magnetic resonance imaging (fMRI) is more effective at capturing activity with high spatial resolution. 
-              Correlating these two signals enables us to associate patterns of EEG activity with the specific brain regions responsible for them. 
-              However, these signals are generally noisy, and their relationship is complex. To overcome this, I developed a novel encoder-decoder 
-              neural network architecture that predicts an EEG spectrogram from fMRI data with a high pearson correlation value of 0.8741. We applied this model to sleep data. 
-              Sleep is primarily understood through EEG. Our findings extend this understanding of sleep by tracing EEG features to specific brain regions that 
-              control, generate, or are modulated by them. 
+              Simultaneous EEG-fMRI combines the high temporal resolution of EEG and the high spatial resolution of fMRI, allowing us to investigate the 
+              spatiotemporal dynamics of electrophysiological neural rhythms that underlie cognition and vigilance. However, the complex relationship between 
+              fMRI and EEG signals and the substantial inter-subject variability in how these signals are related make jointly analyzing the two challenging. 
+              As a novel approach for analyzing EEG-fMRI, we developed a machine learning framework to decode EEG spectrograms (0-17.1 Hz) from brainwide fMRI data. 
+              By predicting spectrograms, our model leverages the covarying structure of neural oscillations. Our model consists of an RNN encoder and a nonlinear 
+              fully-connected decoder. We applied this approach to an EEG-fMRI dataset of 27 subjects transitioning through wakefulness and non-REM sleep stages, 
+              brain states which are defined by neural rhythms. Our model accurately decoded EEG spectrograms with a Pearson correlation value of 0.87. Our results show 
+              that fMRI contains rich information about neural rhythms that allow decoding EEG dynamics, and that this information is distributed across large-scale brain networks. 
+              Additionally, this approach enables investigation of brainwide dynamics underlying oscillatory activity in a variety of experimental paradigms.
+ 
             </p>
           </div>
         </div>
@@ -332,7 +335,7 @@
             <p class="section-p">
               Humans exhibit a remarkable ability to understand speech across various speakers and noisy environments. While there has been 
               significant progress in building accurate speech recognition models, these models rely on architectures that do not reflect brain processes, 
-              leading to behavior that diverges from human behavior. In this lab, we built a non-recurrent speech recognition model and compared its alignment with 
+              leading to divergence from human behavior. In this lab, I built a non-recurrent speech recognition model and compared its alignment with 
               human speech perception against recurrent models. We found that non-recurrent models fail to reproduce patterns of human behavior compared to recurrent ones, 
               suggesting the importance of recurrence in human speech perception. We also examined the extent to which these models could 
               reproduce categorical perception. Categorical perception is the phenomenon in which humans perceive continuously varying speech sounds 
